@@ -8,6 +8,7 @@ export default function Credits () {
                 <div className='credits-header'>
                     <h1>Credits</h1> 
                     <p>Where I got my elements</p>
+                    <div className='star'></div>
                 </div>
                 <h2>Wallpapers</h2>
                 <div className='row'>

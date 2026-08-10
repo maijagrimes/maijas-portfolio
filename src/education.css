@@ -176,6 +176,10 @@
     border: 2px solid black; border-radius: 8px;
 }
 
+.course-toggle:hover {
+    font-weight: bold;
+}
+
 .course-row {
     display: grid;
     grid-template-columns: max-content 1fr;
