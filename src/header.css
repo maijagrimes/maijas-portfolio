@@ -1,0 +1,113 @@
+.header {
+    display: flex; flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.header span {
+    font-size: xx-large;
+    padding-left: 2px;
+}
+
+.header span:hover {
+    display: inline-block;
+    justify-self: center;
+    transform: translate(8px) scale(1.1);
+    background: linear-gradient(45deg, black, black, black, black, black, black, rgb(244, 117, 106), rgb(198, 114, 158), white, black, black, black,black, black);
+    background-size: 300% auto;
+    animation: gradient 3s ease;
+
+    /*  Clip the background to the text characters */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /*  Make the text transparent to reveal the background */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 80%;
+	}
+}
+
+/* --- Base / Desktop Styles --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: rgb(0, 0, 0);
+}
+
+.nav-logos {
+    width: 35px;
+    border: 2px solid white;
+}
+
+.nav-logos:hover {
+    transform: scale(1.03);
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: large;
+}
+
+/* Hide hamburger button on desktop screens */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(5, 4, 4);
+    /*transition: 0.3s;*/
+}
+
+/* --- Mobile Styles (Screens smaller than 768px) --- */
+@media (max-width: 768px) {
+  /* Reveal the hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+  /* Restyle the nav into a hidden vertical dropdown drawer */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 40px; /* Adjust based on navbar height */
+        right: 0;
+        width: 20%;
+        background-color: #ffffff;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    /* Dynamic class to reveal the menu when clicked */
+    .nav-links.active {
+        display: flex;
+    }
+}

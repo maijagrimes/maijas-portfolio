@@ -1,0 +1,61 @@
+.about {
+    margin-top: 15px;
+    padding: 50px; padding-left: 5%; padding-right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    align-self: center;
+    background-image: url(/patterns/pinkplaid.jpg);
+    width: 100%;
+}
+
+.about-left {
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+
+.about-left h1 {
+    background-color: rgb(198, 114, 158); color: rgb(75, 26, 35);
+    padding-left: 4%; padding-right: 4%;
+    font-size: 5em;
+    position: absolute;
+    bottom: 2%; left: 2%;
+    transform: rotate(5deg);
+    border-radius: 8px; border: 3px solid rgb(75, 26, 35);
+    box-shadow: 0 0 2px 2px white;
+    text-align: center;
+}
+
+.about-left h1:hover {
+    transform: scale(1.02) rotate(5deg);
+}
+
+.about-left img {
+    margin-bottom: 10%;
+}
+
+.about-left img:hover {
+    transform: scale(1.01);
+}
+
+.about-right {
+    margin-right: 5%; margin-left: 5%;
+    padding-left: 2%; padding-right: 2%;
+    text-align: center;
+    flex: 1;
+    max-width: 600px;
+    min-width: 400px;
+    color: rgb(75, 26, 35);
+    background-color: whitesmoke;
+    border-radius: 10px; border: 3px solid rgb(198, 114, 158);
+    font-size: 1rem; font-family: "Inter", sans-serif; font-weight: 400;
+    line-height: 1.4;
+}
+
+.about-right:hover {
+    background-color: white;
+}

@@ -1,0 +1,57 @@
+
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+    padding-left: 0;
+    border-left: 1px solid #efefef;
+    height: 80vh;
+    flex: 1;
+    display: flex;          /* make .section-nav itself a flex container */
+    align-items: center;    /* center the <ol> horizontally within it */
+    min-width: 150px;
+}
+
+.section-nav a {
+    text-decoration: none;
+    display: block;
+    padding: .125rem 0;
+    color: #ccc;
+    transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    color: #666;
+}
+
+/** Poor man's reset **/
+* {
+    box-sizing: border-box;
+}
+
+.section-nav ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* spreads items out evenly top-to-bottom */
+    /* or use justify-content: center; gap: 2.5rem; for tighter, centered spacing */
+    gap: 2.5rem;
+    align-items: center;    /* center each <li> horizontally */
+    text-align: center;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-size: x-large;
+    margin-left: 2rem;
+}

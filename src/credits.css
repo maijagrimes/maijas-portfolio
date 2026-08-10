@@ -1,0 +1,134 @@
+.credits {
+    margin-top: 50px;
+    background-color: rgb(255, 203, 160);
+    padding: 20px;
+    display: flex; flex-direction: column;
+}
+
+.credits h1 {
+    font-size: 5rem;
+    color: black; background-color: rgb(249, 163, 112);
+    border: 3px solid black; border-radius: 8px;
+    box-shadow: 0 0 3px 3px white;
+    padding: 0 3% 0 3%;
+    margin: 20px;
+    margin-left: 30px;
+    width: max-content;
+    transform: rotate(-3deg);
+}
+
+.credits h1:hover {
+    transform: rotate(-3deg) scale(1.02);
+}
+
+.credits h2 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0 0 0 20px;
+}
+
+.credits-header {
+    display: flex;
+    align-items: center;
+}
+
+.credits-header p {
+    background-color: rgba(255, 255, 255, 0.386);
+    width: 14rem;
+    font-size: 2.5rem;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid black; border-radius: 8px;
+    box-shadow: 0 0 3px 3px white;
+    transform: rotate(2deg);
+    margin-left: 10px;
+}
+
+.credits-header p:hover {
+    transform: rotate(2deg) scale(1.02);
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin: 20px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.386);
+    border: 3px solid rgb(249, 163, 112); border-radius: 8px;
+}
+
+.row img {
+    width: 250px;
+    border: 3px solid black; border-radius: 8px;
+    
+    margin: 5px;
+}
+
+.row img:hover {
+    transform: translateY(-5px);
+}
+
+.font-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+
+}
+
+.font-preview {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;    
+    margin: 5px;
+}
+
+.font-preview:hover {
+    transform: translateY(-5px);
+}
+
+/* the two guide lines, like the top/bottom rules in a Mac font preview */
+.font-preview::before,
+.font-preview::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    height: 1px;
+    background-color: #000000;
+}
+
+.font-preview::before {
+    top: 43px;
+}
+
+.font-preview::after {
+    bottom: 15px;
+}
+
+.font-preview span {
+    font-size: 5.5rem;
+    line-height: 1;
+    color: #1a1a1a;
+    /* nudge so the glyph sits nicely between the two rules, not dead center */
+    transform: translateY(4px);
+}
+
+.name {
+    margin: 4px 0 0 0;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    color: #4a4a4a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+.name a {
+    color: #4a4a4a;
+}
