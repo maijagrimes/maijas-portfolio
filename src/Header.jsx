@@ -17,7 +17,7 @@ export default function Header() {
                     <div className="bar"></div>
                 </button>
 
-                <div className={`nav-links ${isActive ? 'active' : ''}`}>
+                <div className='nav-links'>
                     <a href="https://www.linkedin.com/in/maijagrimes/" target="_blank">
                         <img className='nav-logos' src="/logos/InBug-Black.png" alt="LinkedIn Logo" />
                     </a>

@@ -50,7 +50,8 @@
 }
 
 .row {
-    display: flex;
+    display: flex; flex: 1;
+    justify-content: space-evenly;
     gap: 15px;
     margin: 20px;
     padding: 25px;

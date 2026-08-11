@@ -27,6 +27,11 @@ export default function Credits () {
                         <p className='name'>Blue Tartan</p>
                         <p className='name'>from <a href="https://baggu.com/wallpapers">Baggu Summer '26</a></p>
                     </div>
+                    <div className='wallpaper'>
+                        <img src="/patterns/leopard.png" alt="Leopard" />
+                        <p className='name'>Leopard</p>
+                        <p className='name'>from <a href="https://baggu.com/wallpapers">Baggu Spring '25</a></p>
+                    </div>
                 </div>
                 <h2>Fonts</h2>
                 <div className='row'>
