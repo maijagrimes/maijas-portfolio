@@ -16,6 +16,7 @@ export default function Education() {
 
     // order[0] is the photo currently on top
     const [order, setOrder] = useState(photos.map((_, i) => i))
+    const [showAll, setShowAll] = useState(false)  
 
     function sendToBack(index) {
         setOrder((prev) => {
@@ -118,76 +119,71 @@ export default function Education() {
     ]
 
     const relevantCourses = courses.filter(course => course.relevant)
-    
+    const coursesToShow = showAll ? courses : relevantCourses  
 
-    function CourseList() {
-        const [showAll, setShowAll] = useState(false)      
-        const coursesToShow = showAll ? courses : relevantCourses  
-        
-        return (
-            <div className='college-stat'>
-                <h3>Relevant Courses</h3>
-                <ul>
-                    {coursesToShow.map((c) => (
-                        <li key={c.code} className="course-row">
-                            <span className="code" style={{ backgroundColor: c.color }}>
-                                {c.code}
-                            </span>
-                            <Dropdown label={c.name}>{c.note}</Dropdown>
-                        </li>
-                    ))}
-                </ul>
-                <button className='course-toggle' onClick={() => setShowAll(p => !p)}>
-                    {showAll ? 'See less' : 'See more'}
-                </button>
-            </div>
-        )
-    }
+    const degreeStat = (
+        <div className='college-stat degree-stat'>
+            <h3>Bachelor's Degree <span className='cs'> Computer Science</span></h3>
+            <h3>Minor <span className='comm'> Communication</span></h3>
+            <p>Aug. 2022 - Aug. 2026</p>
+        </div>
+    )
 
     return (
         <>
             <section className='education' id='education'>
                 <h1>Education</h1>
                 <div className='college'>
-                    <div className='college-left'>                        
-                        <h2>University of Colorado <span>Boulder</span></h2>
-                        <div className='polaroid-stack'>
-                            {order.map((photoIndex, stackPosition) => (
-                                <img
-                                    key={photoIndex}
-                                    className='polaroid'
-                                    src={photos[photoIndex].src}
-                                    alt={photos[photoIndex].alt}
-                                    onClick={() =>
-                                        stackPosition === 0
-                                            ? sendToBack(stackPosition)
-                                            : bringToFront(stackPosition)
-                                    }
-                                    style={{
-                                        zIndex: order.length - stackPosition,
-                                        transform: `translate(${stackPosition * 10}px, ${stackPosition * 10}px) rotate(${rotations[photoIndex % rotations.length]}deg)`,
-                                        cursor: 'pointer',
-                                    }}
-                                />
-                            ))}
+                    <div className='college-left'>
+                        <div className='photo-block'>
+                            <h2>University of Colorado <span className='bold'>Boulder</span></h2>
+                            <div className='polaroid-stack'>
+                                {order.map((photoIndex, stackPosition) => (
+                                    <img
+                                        key={photoIndex}
+                                        className='polaroid'
+                                        src={photos[photoIndex].src}
+                                        alt={photos[photoIndex].alt}
+                                        onClick={() =>
+                                            stackPosition === 0
+                                                ? sendToBack(stackPosition)
+                                                : bringToFront(stackPosition)
+                                        }
+                                        style={{
+                                            zIndex: order.length - stackPosition,
+                                            transform: `translate(${stackPosition * 10}px, ${stackPosition * 10}px) rotate(${rotations[photoIndex % rotations.length]}deg)`,
+                                            cursor: 'pointer',
+                                        }}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    </div>                    
+                        {showAll && degreeStat}
+                    </div>
+
                     <div className='college-right'>
+                        {!showAll && degreeStat}
                         <div className='college-stat'>
-                            <h3>Bachelor's Degree <span className='cs'> Computer Science</span></h3>
-                            <h3>Minor <span className='comm'> Communication</span></h3>    
-                            <p>Aug. 2022 - Aug. 2026</p>                        
+                            <h3>Relevant Courses</h3>
+                            <ul>
+                                {coursesToShow.map((c) => (
+                                    <li key={c.code} className="course-row">
+                                        <span className="code" style={{ backgroundColor: c.color }}>
+                                            {c.code}
+                                        </span>
+                                        <Dropdown label={c.name}>{c.note}</Dropdown>
+                                    </li>
+                                ))}
+                            </ul>
+                            <button className='course-toggle' onClick={() => setShowAll(p => !p)}>
+                                {showAll ? 'See less' : 'See more'}
+                            </button>
                         </div>
-                        <CourseList/>
                     </div>
                 </div>
                 <div className='hs'>
-                    <div className='hs-left'>
-
-                    </div>
-                    <div className='hs-right'>
-
-                    </div>
+                    <div className='hs-left'></div>
+                    <div className='hs-right'></div>
                 </div>
             </section>
         </>

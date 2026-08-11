@@ -15,7 +15,7 @@ export default function App() {
         <>
             <Header/>
             <div style={{display: 'flex', margin: '10px'}}>
-                <div style={{display: 'flex', flexDirection: 'column', flexGrow: '6'}}>
+                <div style={{display: 'flex', flexDirection: 'column', flexGrow: '1', minWidth: '0'}}>
                     <About/>
                     <Projects/>
                     <Experience/>

@@ -25,7 +25,8 @@ html {
 
 body {
     font-family: 'Garamond', auto;
-    overflow: scroll;    
+    overflow: scroll; 
+    overflow-x: hidden;   
     max-width: 1500px;
     margin: 0 auto;
 }

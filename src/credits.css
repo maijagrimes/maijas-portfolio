@@ -57,10 +57,11 @@
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.386);
     border: 3px solid rgb(249, 163, 112); border-radius: 8px;
+    overflow-x: scroll;
 }
 
 .row img {
-    width: 250px;
+    width: 220px;
     border: 3px solid black; border-radius: 8px;
     
     margin: 5px;
@@ -136,12 +137,12 @@
 }
 
 .star {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background-color: rgb(249, 163, 112);
     aspect-ratio: 1;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     position: absolute;
-    top: 2%; right: 2%;
+    top: 75%; right: 2%;
     transform: rotate(15deg);
 }

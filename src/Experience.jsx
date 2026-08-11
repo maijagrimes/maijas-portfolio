@@ -28,7 +28,7 @@ function JobCard({ job }) {
             </div>
 
             <div className='job-body'>
-                <div className='job-col' style={{flex: '3 0 0', minWidth: '385px'}}>
+                <div className='job-col' style={{flex: '3 1 0', minWidth: '350px'}}>
                     <h4>Responsibilities</h4>
                     <ul>
                         {responsibilities.map((r, i) => <li key={i}>{r}</li>)}

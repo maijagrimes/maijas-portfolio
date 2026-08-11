@@ -24,22 +24,35 @@
 }
 
 .college {
-    display: flex; flex: 1; flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     margin: 20px;
     padding: 20px;
 }
 
 .college-left {
-    /* give the stack room so offset photos don't get clipped */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 55px;
+}
+
+.photo-block {
+    position: relative; /* h2's containing block now lives here instead of .college-left */
     padding: 20px 20px 60px 20px;
-    margin: 20px 55px 20px 55px;
-    position: relative;
     min-width: max-content;
-    display: flex; flex: 1; flex-wrap: wrap;
-    justify-content: center;
     height: max-content;
+}
+
+.college-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .college-left h2 {
@@ -60,7 +73,7 @@
     transform: translate(-50%, -50%) scale(1.04) rotate(2deg);
 }
 
-.college-left span {
+.bold {
     font-family: 'Garamond-Bold', auto;
 }
 
@@ -212,4 +225,22 @@
     grid-column: 1 / -1; /* spans code column + title column */
     padding: 0;
 
+}
+
+@media (max-width: 500px) {
+    .polaroid-stack {
+        width: 280px;
+        height: 280px;
+    }
+    .college-left .polaroid {
+        width: 280px;
+        height: 260px;
+    }
+    .college-left {
+        margin: 20px 10px;
+    }
+    .college-stat {
+        width: 100%;
+        max-width: 320px;
+    }
 }

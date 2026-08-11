@@ -212,3 +212,9 @@
 .job-highlight span {
     font-weight: 700;
 }
+
+@media (max-width: 500px) {
+    .job-col {
+        min-width: 0;
+    }
+}

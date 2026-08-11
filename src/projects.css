@@ -17,8 +17,8 @@
 }
 
 .taskboard {
-    display: flex; flex-wrap: wrap; flex: 1;
-    padding-top: 120px;
+    display: flex; flex-direction: column; flex-wrap: wrap; flex: 1;
+    padding-top: 50px;
     margin-top: 50px;
     justify-content: center;
     position: relative;
@@ -27,8 +27,7 @@
 
 .taskboard a {
     width: 45px;
-    position: absolute;
-    top: 65px; right: 45px;
+    margin: 10px;
 }
 
 .taskboard a:hover {
@@ -39,6 +38,42 @@
     width: 45px;
 }
 
+.taskboard-header {
+    display: flex; flex: 1; flex-wrap: wrap;
+    width: 100%; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+.taskboard-header h1 {
+    font-size: 4rem;
+    transform: rotate(-3deg);
+    background-color: rgb(244, 117, 106);
+    padding-left: 3%; padding-right: 3%; padding-bottom: 7px;
+    border: 3px solid black; border-radius: 8px;
+    margin: 0;
+    box-shadow: 0 0 3px 3px white;
+    min-width: max-content;
+}
+
+.taskboard-header h1:hover {
+    transform: scale(1.02) rotate(-3deg);
+}
+
+.taskboard-header p {
+    font-family: 'Short', auto; font-size: large;
+    align-self: center;
+    flex-shrink: 2;
+    margin: 0 3% 0 3%;
+    text-align: center;
+    min-width: 400px;
+    width: 40%;
+}
+
+.taskboard-main {
+    display: flex; flex-wrap: wrap;
+}
+
 .taskboard-left {
     display: flex; flex-direction: row; flex-wrap: wrap; flex: 1;
     align-content: center;
@@ -47,35 +82,11 @@
     justify-content: center;
 }
 
-.taskboard-left h1 {
-    font-size: 4rem;
-    position: absolute;
-    top: 0%; left: 3%;
-    transform: rotate(-3deg);
-    background-color: rgb(244, 117, 106);
-    padding-left: 3%; padding-right: 3%; padding-bottom: 7px;
-    border: 3px solid black; border-radius: 8px;
-    box-shadow: 0 0 3px 3px white;
-    min-width: 280px;
-}
-
-.taskboard-left h1:hover {
-    transform: scale(1.02) rotate(-3deg);
-}
-
 .taskboard-left h3 {
     padding: 10px;
 }
 
-.taskboard-left p {
-    font-family: 'Short', auto; font-size: large;
-    align-self: center;
-    flex-shrink: 1;
-    position: absolute;
-    top: 0%;
-    left: 35%;
-    padding-top: 60px; padding-left: 20px; padding-right: 95px;
-}
+
 
 .taskboard-left ul {
     background-color: rgb(247, 237, 179);
@@ -104,24 +115,22 @@
 }
 
 .buff {
-    padding-top: 140px;
+    padding-top: 50px;
     margin-top: 50px;
-    display: flex; flex-wrap: wrap; flex: 1;
+    display: flex; flex-direction: column; flex-wrap: wrap; flex: 1;
     position: relative;
     justify-content: center;
     background-color: rgb(249, 246, 230);
 }
 
 .buff-label {
-    position: absolute;
-    top: 80px; left: 120px;
     font-size: 1.4rem;
+    width: 40%;
+    text-align: center;
 }
 
 .buff a {
     width: 45px;
-    position: absolute;
-    top: 90px; left: 45px;
 }
 
 .buff a:hover {
@@ -133,18 +142,29 @@
 }
 
 .buff h1 {
-    position: absolute;
-    top: 0%; right: 3%; transform: rotate(5deg);
+    transform: rotate(5deg);
     color: white;
     background-color: black;
     padding-left: 3%; padding-right: 3%; padding-bottom: 7px;
+    margin: 0;
     font-size: 4rem;
     border: 3px solid rgb(95, 137, 210); border-radius: 8px;
     box-shadow: 0 0 3px 3px white;
+    width: max-content;
 }
 
 .buff h1:hover {
     transform: scale(1.02) rotate(5deg);
+}
+
+.buff-header {
+    display: flex; flex: 1; width: 100%; flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buff-main {
+    display: flex; flex-wrap: wrap;
 }
 
 .buff-right {
