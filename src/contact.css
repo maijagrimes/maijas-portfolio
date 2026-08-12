@@ -4,7 +4,7 @@
     background-image: url('/patterns/leopard.png');
     background-size: cover;
     position: relative;
-    padding: 170px 90px 120px 90px;
+    padding: 170px 20px 120px 20px;
     display: flex; flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;

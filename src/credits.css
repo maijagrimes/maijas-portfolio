@@ -28,8 +28,9 @@
 }
 
 .credits-header {
-    display: flex;
+    display: flex; flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -42,7 +43,7 @@
     border: 3px solid black; border-radius: 8px;
     box-shadow: 0 0 3px 3px white;
     transform: rotate(2deg);
-    margin-left: 10px;
+    margin: 10px 0 10px 0;
 }
 
 .credits-header p:hover {
@@ -137,12 +138,12 @@
 }
 
 .star {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: rgb(249, 163, 112);
     aspect-ratio: 1;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     position: absolute;
-    top: 75%; right: 2%;
+    top: 85%; right: 2%;
     transform: rotate(15deg);
 }

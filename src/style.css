@@ -21,6 +21,7 @@
 html {
     scroll-behavior: smooth;
     padding-bottom: 50px;
+    width: 100vw;
 }
 
 body {
@@ -44,7 +45,7 @@ nav {
 }
 
 .polaroid {
-    width: 400px;
+    width: 350px;
     border: 15px solid whitesmoke;
     border-bottom: 60px solid whitesmoke;
     box-shadow: 1px 1px 2px 2px rgb(75, 26, 35);

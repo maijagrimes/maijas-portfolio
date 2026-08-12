@@ -10,7 +10,7 @@ export default function Projects() {
                         <h1>Project #1</h1>
                         <p>A Kanban-style task board where users can manage work visually.</p>
                         <a href="https://github.com/maijagrimes/mytaskboard" target='blank_'>
-                            <img src="/logos/GitHub_Invertocat_Black.png" alt="GitHub Link" />
+                            <img className='github' src="/logos/GitHub_Invertocat_Black.png" alt="GitHub Link" />
                         </a>                        
                     </div>
                     <div className='taskboard-main'>
@@ -35,7 +35,7 @@ export default function Projects() {
                                 </ul>
                             </div>
                     </div>
-                    <div className="iframe-wrapper"> 
+                    <div className="iframe-scale-wrapper mobile-hide"> 
                             <iframe
                             src="https://mytaskboard.neocities.org/"
                             width="100%"
@@ -45,18 +45,22 @@ export default function Projects() {
                             allow="cross-origin-isolated"
                             scrolling='no'
                             />
-                    </div>                        
+                    </div>  
+                    <div className='iframe-screenshot-fallback'>
+                        <img src="/images/taskboard-tasks.png" alt="Screenshot from myTaskboard site" />
+                        <p>Check it out on a bigger screen to try a live demo!</p>
+                    </div>                      
                     </div>
                 </div>
 
                 <div className='buff'>
                     <div className='buff-header'>
-                        <a href="https://github.com/dahi2387/cu-marketplace/tree/main" target='blank_'><img src="/logos/GitHub_Invertocat_Black.png" alt="GitHub Link" /></a>
+                        <a href="https://github.com/dahi2387/cu-marketplace/tree/main" target='blank_'><img className='github' src="/logos/GitHub_Invertocat_Black.png" alt="GitHub Link" /></a>
                         <p className='buff-label'>This project is not formally affiliated with CU Boulder!</p>
                         <h1>Project #2</h1>
                     </div>
                     <div className='buff-main'>
-                        <div className="iframe-wrapper" style={{height: '650px', width: '900px', border: '5px solid rgb(200, 175, 113)' }}>
+                        <div className="iframe-scale-wrapper mobile-hide" style={{height: '650px', width: '900px', border: '5px solid rgb(200, 175, 113)' }}>
                                 <iframe
                                 src="https://cu-marketplace.onrender.com/"
                                 width="100%"
@@ -66,6 +70,10 @@ export default function Projects() {
                                 allow="cross-origin-isolated"
                                 />
                         </div>
+                        <div className='iframe-screenshot-fallback'>
+                            <img src="/images/buff-ss.png" alt="Screenshot from the Buff Market site" />
+                            <p>Check it out on a bigger screen to try a live demo!</p>
+                        </div>  
                         <div className='buff-right'>
                             <div className='stat' style={{boxShadow: '0 0 1px 3px rgb(78, 162, 146)'}}>
                                 <h3>Details:</h3>

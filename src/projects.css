@@ -1,7 +1,8 @@
 /* 1. Define the size you actually want visible on your site */
-.iframe-wrapper {
-    width: 850px;
-    height: 600px;
+.iframe-scale-wrapper {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 850 / 650;
     overflow: hidden;
     position: relative;
     border: 3px solid; border-radius: 8px;
@@ -9,16 +10,50 @@
     margin: 40px;
 }
 
-.iframe-wrapper iframe {
+.iframe-scale-wrapper iframe {
     width: 850px;  
     height: 650px; 
-    transform-origin: 0 0;
+    transform-origin: top left;
+    /* scale = wrapper's rendered width ÷ iframe's real width */
+    transform: scale(var(--iframe-scale, 0.588));
+    border: none;
     background-color: white;
+}
+
+.iframe-screenshot-fallback {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .mobile-hide {
+        display: none;
+    }
+    .iframe-screenshot-fallback {
+        display: flex; flex: 1;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+        min-width: 280px;
+        margin: 15px;
+    }
+    .iframe-screenshot-fallback img {
+        width: 100%;
+        max-width: 400px;
+        border: 2px solid black;
+        border-radius: 8px;
+    }
+
+    .iframe-screenshot-fallback p {
+        margin: 0;
+        font-family: 'Short', auto; font-size: .9rem;
+        text-align: center;
+    }
 }
 
 .taskboard {
     display: flex; flex-direction: column; flex-wrap: wrap; flex: 1;
-    padding-top: 50px;
+    padding: 50px 0 50px 0;
     margin-top: 50px;
     justify-content: center;
     position: relative;
@@ -30,12 +65,12 @@
     margin: 10px;
 }
 
-.taskboard a:hover {
-    transform: scale(1.02);
+.github {
+    width: 45px;
 }
 
-.taskboard img {
-    width: 45px;
+.github:hover {
+    transform: scale(1.02);
 }
 
 .taskboard-header {
@@ -51,7 +86,7 @@
     background-color: rgb(244, 117, 106);
     padding-left: 3%; padding-right: 3%; padding-bottom: 7px;
     border: 3px solid black; border-radius: 8px;
-    margin: 0;
+    margin: 10px 0 20px 0;
     box-shadow: 0 0 3px 3px white;
     min-width: max-content;
 }
@@ -72,6 +107,8 @@
 
 .taskboard-main {
     display: flex; flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .taskboard-left {
@@ -129,18 +166,6 @@
     text-align: center;
 }
 
-.buff a {
-    width: 45px;
-}
-
-.buff a:hover {
-    transform: scale(1.02);
-}
-
-.buff img {
-    width: 45px;
-}
-
 .buff h1 {
     transform: rotate(5deg);
     color: white;
@@ -161,6 +186,7 @@
     display: flex; flex: 1; width: 100%; flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .buff-main {
