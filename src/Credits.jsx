@@ -13,22 +13,22 @@ export default function Credits () {
                 <h2>Wallpapers</h2>
                 <div className='row'>
                     <div className='wallpaper'>
-                        <img src="/patterns/pinkplaid.jpg" alt="Pink Plaid" />
+                        <img className='wallpaper-image' src="/patterns/pinkplaid.jpg" alt="Pink Plaid" />
                         <p className='name'>Azalea Pink Tartan</p>
                         <p className='name'>from <a href="https://baggu.com/wallpapers">Baggu Summer '26</a></p>
                     </div>
                     <div className='wallpaper'>
-                        <img src="/patterns/stripe.png" alt="Stripes" />
+                        <img className='wallpaper-image' src="/patterns/stripe.png" alt="Stripes" />
                         <p className='name'>Periwinkle Stripe</p>
                         <p className='name'>from <a href="https://baggu.com/wallpapers">Baggu Summer '21</a></p>
                     </div>
                     <div className='wallpaper'>
-                        <img src="/patterns/blueplaid.jpg" alt="Blue Plaid" />
+                        <img className='wallpaper-image' src="/patterns/blueplaid.jpg" alt="Blue Plaid" />
                         <p className='name'>Blue Tartan</p>
                         <p className='name'>from <a href="https://baggu.com/wallpapers">Baggu Summer '26</a></p>
                     </div>
                     <div className='wallpaper'>
-                        <img src="/patterns/leopard.png" alt="Leopard" />
+                        <img className='wallpaper-image' src="/patterns/leopard.png" alt="Leopard" />
                         <p className='name'>Leopard</p>
                         <p className='name'>from <a href="https://baggu.com/wallpapers">Baggu Spring '25</a></p>
                     </div>

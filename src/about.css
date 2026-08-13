@@ -111,12 +111,12 @@
 
 @media (max-width: 600px) {
     .about-polaroid-stack {
-        width: 350px;
-        height: 320px;
+        width: 300px;
+        height: 280px;
     }
     .about-left .polaroid {
-        width: 350px;
-        height: 320px;
+        width: 300px;
+        height: 280px;
     }
     .about-left {
         margin: 20px 10px;

@@ -28,7 +28,7 @@
 
 .contact form {
     display: flex; flex-direction: column;
-    width: clamp(400px, 55vw, 600px);
+    width: clamp(400px, 45vw, 600px);
     background-color: rgb(255, 237, 199);
     padding: 15px;
     border: 3px solid black; border-radius: 8px;
@@ -70,13 +70,18 @@ input:focus, textarea:focus {
 }
 
 .contact-logo {
-    width: 100px; height: 100px;
-    padding: 10px;
+    width: clamp(70px, 23vw, 100px);
+    padding: 5px;
     border-radius: 8px;
 }
 
 .contact-logo:hover {
     transform: translateY(-4px);
+}
+
+.contact-left {
+    flex: 0;
+    justify-items: center;
 }
 
 .contact-left h2 {
@@ -90,7 +95,7 @@ input:focus, textarea:focus {
 }
 
 .contact-right {
-    display: flex; flex-direction: column;
+    display: flex; flex-direction: column; flex: 0;
     gap: 20px;
     align-items: center;
 }
