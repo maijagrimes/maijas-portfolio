@@ -23,6 +23,7 @@
 .job {
     display: flex; flex: 1; flex-direction: column;
     width: 90%;
+    min-width: 200px;
     align-self: center;
     justify-content: space-between;
     padding: 20px;
@@ -212,10 +213,4 @@
 
 .job-highlight span {
     font-weight: 700;
-}
-
-@media (max-width: 500px) {
-    .job-col {
-        min-width: 0;
-    }
 }

@@ -60,12 +60,12 @@ export default function Projects() {
                         <h1>Project #2</h1>
                     </div>
                     <div className='buff-main'>
-                        <div className="iframe-scale-wrapper mobile-hide" style={{height: '650px', width: '900px', border: '5px solid rgb(200, 175, 113)' }}>
+                        <div className="iframe-scale-wrapper mobile-hide" style={{ border: '5px solid rgb(200, 175, 113)' }}>
                                 <iframe
                                 src="https://cu-marketplace.onrender.com/"
                                 width="100%"
                                 height="100%"
-                                style={{ border: "none", height: '645px', width: '900px' }}
+                                style={{ border: "none", height: '645px', width: '850px' }}
                                 title="myTaskboard"
                                 allow="cross-origin-isolated"
                                 />

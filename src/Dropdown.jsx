@@ -1,14 +1,25 @@
 import { useState } from "react"
 
-// Dropdown.jsx
-export default function Dropdown({ label, children }) {
-    const [expanded, setExpanded] = useState(false)
+export default function Dropdown({ label, children, isOpen, onToggle }) {
+    const [internalExpanded, setInternalExpanded] = useState(false)
+
+    // Controlled if isOpen/onToggle are passed, otherwise falls back to internal state
+    const isControlled = isOpen !== undefined && onToggle !== undefined
+    const expanded = isControlled ? isOpen : internalExpanded
+
+    function handleClick() {
+        if (isControlled) {
+            onToggle()
+        } else {
+            setInternalExpanded(p => !p)
+        }
+    }
 
     return (
         <div className="dropdown">
         <button
             className="dropdown-toggle"
-            onClick={() => setExpanded(p => !p)}
+            onClick={handleClick}
             aria-expanded={expanded}
         >
             {label}

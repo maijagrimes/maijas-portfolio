@@ -60,9 +60,9 @@
 }
 
 .college-left h2 {
-    font-size: 2.9rem;
+    font-size: clamp(2rem, 8vw ,2.9rem);
     padding: 3px 3% 7px 3%;
-    width: 100%;
+    width: 80%;
     color: black; background-color: white;
     border: 3px solid black; border-radius: 8px;
     box-shadow: 0 0 3px 3px white;
@@ -233,14 +233,14 @@
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .polaroid-stack {
-        width: 280px;
-        height: 280px;
+        width: 350px;
+        height: 320px;
     }
     .college-left .polaroid {
-        width: 280px;
-        height: 260px;
+        width: 350px;
+        height: 320px;
     }
     .college-left {
         margin: 20px 10px;

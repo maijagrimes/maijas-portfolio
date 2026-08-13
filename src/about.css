@@ -1,12 +1,18 @@
 .about {
     margin-top: 15px;
     padding: 50px; padding-left: 5%; padding-right: 5%;
-    display: flex;
+    display: flex; flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     flex: 1;
     align-self: center;
     background-image: url(/patterns/pinkplaid.jpg);
+    width: 100%;
+}
+
+.about-top {
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
 }
 
@@ -20,14 +26,16 @@
 
 .about-left h1 {
     background-color: rgb(198, 114, 158); color: rgb(75, 26, 35);
-    padding-left: 4%; padding-right: 4%;
+    padding: 0 4% 0 4%;
+    margin: 0;
     font-size: 5em;
     position: absolute;
-    bottom: 2%; left: 2%;
+    bottom: 1%; left: 2%;
     transform: rotate(5deg);
     border-radius: 8px; border: 3px solid rgb(75, 26, 35);
     box-shadow: 0 0 2px 2px white;
     text-align: center;
+    z-index: 999;
 }
 
 .about-left h1:hover {
@@ -48,7 +56,7 @@
     text-align: center;
     flex: 1;
     max-width: 600px;
-    min-width: 400px;
+    min-width: 300px;
     color: rgb(75, 26, 35);
     background-color: whitesmoke;
     border-radius: 10px; border: 3px solid rgb(198, 114, 158);
@@ -64,9 +72,65 @@
     color: brown;
 }
 
-@media (max-width: 500px) {
-    .about-right {
-        min-width: 0;
-        width: 90%;
+.about-photo-block {
+    position: relative; /* h2's containing block now lives here instead of .college-left */
+    padding: 20px 20px 60px 20px;
+    min-width: max-content; width: 100%;
+    height: max-content;
+}
+
+.about-polaroid-stack {
+    position: relative;
+    /* size to your largest photo so the layout doesn't jump around */
+    width: 450px;
+    height: 370px;
+    justify-self: center;
+}
+
+.about-left .polaroid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    object-fit: cover;
+    border: 15px solid whitesmoke;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, z-index 0s;
+}
+
+.about-toggle {
+    margin: 10px 0 10px 0;
+    padding: 1% 3% 1% 3%;
+    color: rgb(75, 26, 35);
+    border: 2px solid rgb(75, 26, 35); border-radius: 8px;
+}
+
+.about-toggle:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .about-polaroid-stack {
+        width: 350px;
+        height: 320px;
     }
+    .about-left .polaroid {
+        width: 350px;
+        height: 320px;
+    }
+    .about-left {
+        margin: 20px 10px;
+    }
+}
+
+.about-bottom {
+    display: flex; flex: 1; flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fact {
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 2px solid rgb(75, 26, 35); border-radius: 8px;
+    text-align: center;
 }

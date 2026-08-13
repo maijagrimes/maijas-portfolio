@@ -17,6 +17,7 @@ export default function Education() {
     // order[0] is the photo currently on top
     const [order, setOrder] = useState(photos.map((_, i) => i))
     const [showAll, setShowAll] = useState(false)  
+    const [openCourse, setOpenCourse] = useState(null)
 
     function sendToBack(index) {
         setOrder((prev) => {
@@ -171,7 +172,9 @@ export default function Education() {
                                         <span className="code" style={{ backgroundColor: c.color }}>
                                             {c.code}
                                         </span>
-                                        <Dropdown label={c.name}>{c.note}</Dropdown>
+                                        <Dropdown label={c.name} isOpen={openCourse === c.code} onToggle={() => setOpenCourse(prev => prev === c.code ? null : c.code)}>
+                                            {c.note}
+                                        </Dropdown>
                                     </li>
                                 ))}
                             </ul>

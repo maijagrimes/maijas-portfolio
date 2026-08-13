@@ -1,8 +1,8 @@
 /* 1. Define the size you actually want visible on your site */
 .iframe-scale-wrapper {
-    width: 100%;
-    max-width: 500px;
-    aspect-ratio: 850 / 650;
+    --scale: 1;
+    width: calc(850px * var(--scale));
+    height: calc(600px * var(--scale));
     overflow: hidden;
     position: relative;
     border: 3px solid; border-radius: 8px;
@@ -15,13 +15,25 @@
     height: 650px; 
     transform-origin: top left;
     /* scale = wrapper's rendered width ÷ iframe's real width */
-    transform: scale(var(--iframe-scale, 0.588));
+    transform: scale(var(--scale));
     border: none;
     background-color: white;
 }
 
 .iframe-screenshot-fallback {
     display: none;
+}
+
+@media (max-width: 900px) {
+    .iframe-scale-wrapper {
+        --scale: 0.7;
+    }
+}
+
+@media (max-width: 700px) {
+    .iframe-scale-wrapper {
+        --scale: 0.55;
+    }
 }
 
 @media (max-width: 600px) {
@@ -43,7 +55,6 @@
         border: 2px solid black;
         border-radius: 8px;
     }
-
     .iframe-screenshot-fallback p {
         margin: 0;
         font-family: 'Short', auto; font-size: .9rem;
@@ -191,6 +202,8 @@
 
 .buff-main {
     display: flex; flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .buff-right {
