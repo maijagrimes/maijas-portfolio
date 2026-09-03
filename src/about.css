@@ -10,10 +10,9 @@
     width: 100%;
 }
 
-.about-top {
-    display: flex; flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+.about-bottom {
+    display: flex; flex: 1; flex-wrap: wrap;
+    gap: 20px;
 }
 
 .about-left {
@@ -72,6 +71,22 @@
     color: brown;
 }
 
+.about-right-outer {
+    display: flex; flex-direction: column;
+    align-items: center;
+}
+
+.about-right ul {
+    list-style-type: disc;
+    text-align: left;
+    padding: 10px;
+
+}
+
+.about-right li {
+    font-size: 1.4rem;
+}
+
 .about-photo-block {
     position: relative; /* h2's containing block now lives here instead of .college-left */
     padding: 20px 20px 60px 20px;
@@ -100,13 +115,28 @@
 
 .about-toggle {
     margin: 10px 0 10px 0;
-    padding: 1% 3% 1% 3%;
+    padding: 5px 10px 5px 10px;
     color: rgb(75, 26, 35);
     border: 2px solid rgb(75, 26, 35); border-radius: 8px;
+    width: max-content;
+    font-size: 1.2rem; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400;
 }
 
 .about-toggle:hover {
     font-weight: bold;
+}
+
+.about-top {
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.fact {
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 2px solid rgb(75, 26, 35); border-radius: 8px;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
@@ -121,16 +151,4 @@
     .about-left {
         margin: 20px 10px;
     }
-}
-
-.about-bottom {
-    display: flex; flex: 1; flex-wrap: wrap;
-    gap: 20px;
-}
-
-.fact {
-    background-color: whitesmoke;
-    padding: 10px;
-    border: 2px solid rgb(75, 26, 35); border-radius: 8px;
-    text-align: center;
 }
