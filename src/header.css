@@ -65,6 +65,13 @@
     transform: scale(1.03);
 }
 
+.nav-links {
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .nav-links a {
     color: rgb(0, 0, 0);
     text-decoration: none;
